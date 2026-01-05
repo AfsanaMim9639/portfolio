@@ -45,9 +45,9 @@ const ProjectCard = ({ project, index, onSelect }) => {
             {truncateText(project.shortDesc)}
           </p>
 
-          {/* Tech Stack - Show only first 3 */}
+          {/* Tech Stack - Show only first 5 */}
           <div className="flex flex-wrap gap-2 mb-4">
-            {project.techStack.slice(0, 3).map((tech, i) => (
+            {project.techStack.slice(0, 5).map((tech, i) => (
               <span
                 key={i}
                 className="px-3 py-1 bg-teal-500/20 text-teal-400 rounded-full text-xs border border-teal-500/30"
@@ -55,9 +55,9 @@ const ProjectCard = ({ project, index, onSelect }) => {
                 {tech}
               </span>
             ))}
-            {project.techStack.length > 3 && (
+            {project.techStack.length > 5 && (
               <span className="px-3 py-1 bg-gray-700/50 text-gray-400 rounded-full text-xs border border-gray-600/30">
-                +{project.techStack.length - 3} more
+                +{project.techStack.length - 5} more
               </span>
             )}
           </div>
