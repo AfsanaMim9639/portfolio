@@ -7,7 +7,7 @@ import * as THREE from 'three';
 import gsap from 'gsap';
 import { X } from 'lucide-react';
 
-const Navbar = ({ navItems, mobileMenuOpen, setMobileMenuOpen }) => {
+const Navbar = ({ mobileMenuOpen, setMobileMenuOpen }) => {
   const containerRef = useRef(null);
   const sceneRef = useRef(null);
   const rendererRef = useRef(null);
@@ -15,6 +15,8 @@ const Navbar = ({ navItems, mobileMenuOpen, setMobileMenuOpen }) => {
   const animationRef = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
+
+  const navItems = ['Home', 'About', 'Skills', 'Education', 'Experience', 'Projects', 'Contact'];
 
   useEffect(() => {
     if (!containerRef.current) return;
